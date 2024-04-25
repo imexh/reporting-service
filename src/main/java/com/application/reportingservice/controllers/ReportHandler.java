@@ -36,7 +36,7 @@ public class ReportHandler {
     }
 
     @PostMapping("/reports")
-    public ResponseEntity<ReportViewResponseDTO> donate(
+    public ResponseEntity<ReportViewResponseDTO> createReport(
             @RequestBody CreateReportRequestDTO requestDTO) {
         return new ResponseEntity<>(this.reportService.saveReport(requestDTO.toReport()), HttpStatus.CREATED);
     }
